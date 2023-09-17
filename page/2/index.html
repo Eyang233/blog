@@ -601,7 +601,6 @@
         
   <!-- 首页轮播 -->
   
-
   <link href="../../js/vue-typed-js/index.css" rel="stylesheet">
 
 
@@ -675,14 +674,35 @@
 </style>
 
 
+
+
 <script>
   var autoplay = JSON.parse('false');
   var delay = '5000';
   var loop = JSON.parse('true') ? false : JSON.parse('true');
   var effect = 'slide';
   var swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  var defaultDesc = '于海底久矣，鱼亦欲飞矣,风会带来故事的种子，时间使它发芽,欲买桂花同载酒，终不似，少年游,且将新火试新茶，诗酒趁年华,醉后不知天在水，满船清梦压星河,君埋泉下泥销骨，我寄人间雪满头,黯乡魂，追旅思';
+  /*function updatePoem() {
+    setTimeout(updatePoem, 1000);
+    var charset="utf-8";
+    var poemContainer = document.getElementById('jinrishici-sentence');
+    if (poemContainer) {
+      var poemContent = poemContainer.innerText;
+      vm.defaultDesc.push(poemContent);
+    }
+  }*/
+  var defaultDesc = '于海底久矣，鱼亦欲飞矣';
   defaultDesc = defaultDesc.split(',');
+  /*updatePoem()
+  function descRenew () {
+    setTimeout(descRenew, 1000);
+    var defaultDesc = '于海底久矣，鱼亦欲飞矣';
+    defaultDesc = defaultDesc.split(',');
+    vm.defaultDesc = defaultDesc; // 更新defaultDesc的值
+  }
+  descRenew();*/
+  //var defaultDesc = '于海底久矣，鱼亦欲飞矣';
+  //defaultDesc = defaultDesc.split(',');
   var defaultDescTypedLoop = JSON.parse('true');
   var vm = new Vue({
     el: '#appSwiper',
@@ -743,6 +763,7 @@
         $('html,body').animate({scrollTop: fullHeight},500);
       }
     },
+    // created() {}
     created() {}
   })
 </script>
@@ -1491,7 +1512,7 @@
 
 
     <div class='content'>
-    <a href="../../tags/Bugs/" style="font-size: 15px; color: #999">Bugs</a> <a href="../../tags/Bugs-Code/" style="font-size: 15px; color: #999">Bugs, Code</a> <a href="../../tags/Thoughts/" style="font-size: 25px; color: #555">Thoughts</a>
+    <a href="../../tags/Bugs/" style="font-size: 15px; color: #999">Bugs</a> <a href="../../tags/Code/" style="font-size: 15px; color: #999">Code</a> <a href="../../tags/Thoughts/" style="font-size: 25px; color: #555">Thoughts</a>
     </div>
 </section>
 
@@ -1669,14 +1690,28 @@
       
 
       
+        <div class="webinfo-item">
+          <div>Visitors:</div>
+          
+          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> </div>
+          
+        </div>
+      
 
+      
+        <div class="webinfo-item">
+          <div>Total Views:</div>
+          
+          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> </div>
+          
+        </div>
       
 
       
         <div class="webinfo-item">
           <div>Last Update:</div>
           
-            <div>2023-09-17 </div>
+            <div>2023-09-18 </div>
           
         </div>
         
@@ -2523,6 +2558,8 @@
 
 
 
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
 
 
 <!-- 轮播图标签 -->

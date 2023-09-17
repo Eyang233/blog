@@ -601,7 +601,6 @@
         
   <!-- 首页轮播 -->
   
-
   <link href="/js/vue-typed-js/index.css" rel="stylesheet">
 
 
@@ -675,14 +674,35 @@
 </style>
 
 
+
+
 <script>
   var autoplay = JSON.parse('false');
   var delay = '5000';
   var loop = JSON.parse('true') ? false : JSON.parse('true');
   var effect = 'slide';
   var swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
-  var defaultDesc = '于海底久矣，鱼亦欲飞矣,风会带来故事的种子，时间使它发芽,欲买桂花同载酒，终不似，少年游,且将新火试新茶，诗酒趁年华,醉后不知天在水，满船清梦压星河,君埋泉下泥销骨，我寄人间雪满头,黯乡魂，追旅思';
+  /*function updatePoem() {
+    setTimeout(updatePoem, 1000);
+    var charset="utf-8";
+    var poemContainer = document.getElementById('jinrishici-sentence');
+    if (poemContainer) {
+      var poemContent = poemContainer.innerText;
+      vm.defaultDesc.push(poemContent);
+    }
+  }*/
+  var defaultDesc = '于海底久矣，鱼亦欲飞矣';
   defaultDesc = defaultDesc.split(',');
+  /*updatePoem()
+  function descRenew () {
+    setTimeout(descRenew, 1000);
+    var defaultDesc = '于海底久矣，鱼亦欲飞矣';
+    defaultDesc = defaultDesc.split(',');
+    vm.defaultDesc = defaultDesc; // 更新defaultDesc的值
+  }
+  descRenew();*/
+  //var defaultDesc = '于海底久矣，鱼亦欲飞矣';
+  //defaultDesc = defaultDesc.split(',');
   var defaultDescTypedLoop = JSON.parse('true');
   var vm = new Vue({
     el: '#appSwiper',
@@ -743,6 +763,7 @@
         $('html,body').animate({scrollTop: fullHeight},500);
       }
     },
+    // created() {}
     created() {}
   })
 </script>
@@ -1224,46 +1245,53 @@
     <!-- 首页倒计时 -->
     
   <div class="countdown">
-    <h3 class="countdown-title">距离<span style="color: #16a951;">拿到新Apple Watch </span>还有</h3>
+    <h3 class="countdown-title" style="font-weight: normal;">距离<b style="color: #16a951;">拿到新Apple Watch</b>还有</h3>
     <div class="countdown-content">
       <p id='countdown-content'>
-        <script>
-          // 设置截止时间
-          var targetDate = new Date(2023,8,23,20,00,0).getTime();
-          
-          // 计算剩余时间
-          function updateCountdown() {
-            var now = new Date();
-            var timeLeft = targetDate - now.getTime();
-            // 计算剩余天、时、分、秒
-            var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            var showDay = days + ' 天 ';
-            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var showHour = hours + ' 时 ';
-            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            var showMin = minutes + ' 分 ';
-            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            var showSec = seconds + ' 秒';
-            
-            // 更新页面上的倒计时显示
-            document.getElementById("countdown-content").innerHTML = showDay + showHour + showMin + showSec;
-
-            if (timeLeft > 0) {
-              // 每秒钟更新一次倒计时
-              setTimeout(updateCountdown, 1000);
-            } else {
-              // 倒计时结束后显示消息
-              clearInterval(setTimeout(updateCountdown));
-              document.getElementById("countdown-content").innerHTML = "0 天 0 时 0 分 0 秒";
-            }
-          }
-
-          // 初始调用
-          updateCountdown();
-        </script>
       </p> 
     </div>
   </div>
+  //深绿：077a7a，主题绿=16a951,减半后in十进制=11.85.41
+  <script>
+    // 设置截止时间
+    var targetDate = new Date(2023,8,23,20,00,0).getTime();
+    // 设置是否精确到时/分/秒
+    var accuracyHour = false
+    var accuracyMinute = false
+    var accuracySecond = false
+    // 计算剩余时间
+    function updateCountdown() {
+      var now = new Date();
+      var timeLeft = targetDate - now.getTime();
+      // 计算剩余天、时、分、秒
+      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      var showContent = '<b style="font-size: 25px; color: #107d3d;">' + days + '</b> 天 ';
+      if (accuracyHour) {
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var showContent = showContent + '<b>' + hours + '</b> 时 ';
+      } else if (accuracyMinute) {
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var showContent = showContent + '<b>' + minutes + '</b> 分 ';
+      } else if (accuracySecond) {
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      var showContent = showContent + '<b>' + seconds + '</b> 秒 ';
+      }
+      // 更新页面上的倒计时显示
+      document.getElementById("countdown-content").innerHTML = showContent;
+
+      if (timeLeft > 0) {
+        // 每秒钟更新一次倒计时
+        setTimeout(updateCountdown, 1000);
+      } else {
+        // 倒计时结束后显示消息
+        clearInterval(setTimeout(updateCountdown));
+        document.getElementById("countdown-content").innerHTML = "0 天 0 时 0 分 0 秒";
+      }
+    }
+
+    // 初始调用
+    updateCountdown();
+  </script>
 
     <!-- 首页座右铭 -->
     
@@ -1419,7 +1447,7 @@
               <!-- 文章详情页的标签 -->
 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Bugs-Code/" rel="tag">Bugs, Code</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Code/" rel="tag">Code</a></li></ul>
 
             </div>
             <div class="post-categories">
@@ -1519,7 +1547,7 @@
               <!-- 文章详情页的标签 -->
 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Bugs-Code/" rel="tag">Bugs, Code</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Code/" rel="tag">Code</a></li></ul>
 
             </div>
             <div class="post-categories">
@@ -1619,7 +1647,7 @@ Add a new post (run in Terminal):hexo n(ew) &lt;title&gt
               <!-- 文章详情页的标签 -->
 
     <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Bugs-Code/" rel="tag">Bugs, Code</a></li></ul>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/Code/" rel="tag">Code</a></li></ul>
 
             </div>
             <div class="post-categories">
@@ -2016,7 +2044,7 @@ All I have done to solve this problem is just turning mod
 
 
     <div class='content'>
-    <a href="tags/Bugs/" style="font-size: 15px; color: #999">Bugs</a> <a href="tags/Bugs-Code/" style="font-size: 15px; color: #999">Bugs, Code</a> <a href="tags/Thoughts/" style="font-size: 25px; color: #555">Thoughts</a>
+    <a href="tags/Bugs/" style="font-size: 15px; color: #999">Bugs</a> <a href="tags/Code/" style="font-size: 15px; color: #999">Code</a> <a href="tags/Thoughts/" style="font-size: 25px; color: #555">Thoughts</a>
     </div>
 </section>
 
@@ -2194,14 +2222,28 @@ All I have done to solve this problem is just turning mod
       
 
       
+        <div class="webinfo-item">
+          <div>Visitors:</div>
+          
+          <div><span id="busuanzi_value_site_uv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> </div>
+          
+        </div>
+      
 
+      
+        <div class="webinfo-item">
+          <div>Total Views:</div>
+          
+          <div><span id="busuanzi_value_site_pv"><i class="fas fa-fan fa-spin fa-fw" aria-hidden="true"></i></span> </div>
+          
+        </div>
       
 
       
         <div class="webinfo-item">
           <div>Last Update:</div>
           
-            <div>2023-09-17 </div>
+            <div>2023-09-18 </div>
           
         </div>
         
@@ -3048,6 +3090,8 @@ All I have done to solve this problem is just turning mod
 
 
 
+
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
 
 
 <!-- 轮播图标签 -->
