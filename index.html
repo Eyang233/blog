@@ -1265,14 +1265,20 @@
       var timeLeft = targetDate - now.getTime();
       // 计算剩余天、时、分、秒
       var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      var showContent = '<b style="font-size: 25px; color: #107d3d;">' + days + '</b> 天 ';
+      if (accuracyHour === false && accuracyMinute === false && accuracySecond === false) {
+        var showContent = '<b style="font-size: 25px; color: #107d3d;">' + days + '</b> 天 ';
+      } else {
+        var showContent = '<b">' + days + '</b> 天 ';
+      }
       if (accuracyHour) {
         var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var showContent = showContent + '<b>' + hours + '</b> 时 ';
-      } else if (accuracyMinute) {
+      }
+      if (accuracyMinute) {
         var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
         var showContent = showContent + '<b>' + minutes + '</b> 分 ';
-      } else if (accuracySecond) {
+      }
+      if (accuracySecond) {
       var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
       var showContent = showContent + '<b>' + seconds + '</b> 秒 ';
       }
