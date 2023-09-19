@@ -1256,9 +1256,9 @@
     // 设置截止时间
     var targetDate = new Date(2023,8,23,20,00,0).getTime();
     // 设置是否精确到时/分/秒
-    var accuracyHour = true
-    var accuracyMinute = true
-    var accuracySecond = true
+    var accuracyHour = false
+    var accuracyMinute = false
+    var accuracySecond = false
     // 计算剩余时间
     function updateCountdown() {
       var now = new Date();
@@ -1268,7 +1268,7 @@
       if (accuracyHour === false && accuracyMinute === false && accuracySecond === false) {
         var showContent = '<b style="font-size: 25px; color: #107d3d;">' + days + '</b> 天 ';
       } else {
-        var showContent = '<b">' + days + '</b> 天 ';
+        var showContent = '<b>' + days + '</b> 天 ';
       }
       if (accuracyHour) {
         var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -1301,6 +1301,15 @@
 
     <!-- 首页座右铭 -->
     
+  <div class="motto">
+      <h3 class="motto-title">座右铭</h3>
+      <div class="motto-content">
+        <p>
+          沉淀后我愿意做个温暖的人，有自己的喜好，有自己的原则，有自己的信仰，不急功近利，不浮夸轻薄。宠辱不惊，淡定安逸，心静如水，不忘初心，方得始终。——凌茜  
+        </p> 
+      </div>
+  </div>
+
     <!-- 首页公告 -->
     
 <style>
@@ -2235,7 +2244,7 @@ All I have done to solve this problem is just turning mod
         <div class="webinfo-item">
           <div>Last Update:</div>
           
-            <div>2023-09-19 </div>
+            <div>2023-09-20 </div>
           
         </div>
         
@@ -2451,21 +2460,6 @@ All I have done to solve this problem is just turning mod
             <p>Copyright © 2019 - 2020 <a target="_blank" rel="noopener" href="https://github.com/yuang01">yuang01</a> | Powered by <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a> </p>
 
           </div>
-        
-      
-        
-          
-            <!-- 不蒜子统计 -->
-            <!-- 不蒜子统计 -->
-<span id="busuanzi_container_site_pv">
-      <i class="fas fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
-</span>
-<span class="post-meta-divider">|</span>
-<span id="busuanzi_container_site_uv" style='display:none'>
-      <i class="fas fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
-</span>
-
-          
         
       
         
