@@ -2385,32 +2385,6 @@ pre:hover::-webkit-scrollbar-thumb:hover,
     padding: 15px 10%;
   }
 }
-.countdown {
-  width: 100%;
-  margin-bottom: 16px;
-  background: #fff;
-  box-shadow: 0 1px 20px -6px rgba(0,0,0,0.5);
-  padding: 20px;
-  border-radius: 10px;
-  box-sizing: border-box;
-  transition: all 0.3s;
-  position: relative;
-  background: /img/IMG_7229.JPG;
-}
-.countdown .countdown-title {
-  text-align: center;
-  margin-bottom: 10px;
-}
-.countdown .countdown-content {
-  text-align: center;
-  padding: 15px 20%;
-  color: #34495e;
-}
-@media (max-width: 551px) {
-  .countdown .countdown-content {
-    padding: 15px 10%;
-  }
-}
 .index-notice {
   width: 100%;
   margin-bottom: 16px;
@@ -3682,11 +3656,14 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .donate_bar a.btn_donate {
   display: inline-block;
-  width: 82px;
-  height: 82px;
+  // width: 82px;
+  // height: 82px;
+  width: 20px;
+  height: 20px;
   margin-left: auto;
   margin-right: auto;
   background: url("http://img.t.sinajs.cn/t5/style/images/apps_PRF/e_media/btn_reward.gif") no-repeat;
+  // background: url("/medias/donate.svg");
   -webkit-transition: background 0s;
   -moz-transition: background 0s;
   -o-transition: background 0s;
