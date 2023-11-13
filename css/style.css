@@ -2394,6 +2394,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   border-radius: 10px;
   box-sizing: border-box;
   transition: all 0.3s;
+  position: relative;
   background: /img/IMG_7229.JPG;
 }
 .countdown .countdown-title {
@@ -4491,6 +4492,17 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #8b949e;
 }
 .darkModel .motto h3 {
+  color: #c9d1d9;
+}
+.darkModel .countdown {
+  transition: background 0.3s;
+  background: #2d3032;
+}
+.darkModel .countdown .countdown-content {
+/* color: #8b949e; */
+  color: #b0d5df;
+}
+.darkModel .countdown h3 {
   color: #c9d1d9;
 }
 .darkModel .index-notice {
