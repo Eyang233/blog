@@ -2385,6 +2385,32 @@ pre:hover::-webkit-scrollbar-thumb:hover,
     padding: 15px 10%;
   }
 }
+.timer {
+  width: 100%;
+  margin-bottom: 16px;
+  background: #fff;
+  box-shadow: 0 1px 20px -6px rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  position: relative;
+  background: /img/IMG_7229.JPG;
+}
+.timer .timer-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.timer .timer-content {
+  text-align: center;
+  padding: 15px 20%;
+  color: #34495e;
+}
+@media (max-width: 551px) {
+  .timer .timer-content {
+    padding: 15px 10%;
+  }
+}
 .countdown {
   width: 100%;
   margin-bottom: 16px;
@@ -4492,6 +4518,17 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #8b949e;
 }
 .darkModel .motto h3 {
+  color: #c9d1d9;
+}
+.darkModel .timer {
+  transition: background 0.3s;
+  background: #2d3032;
+}
+.darkModel .timer .timer-content {
+/* color: #8b949e; */
+  color: #b0d5df;
+}
+.darkModel .timer h3 {
   color: #c9d1d9;
 }
 .darkModel .countdown {

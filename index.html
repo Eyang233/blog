@@ -1278,6 +1278,42 @@
   <div class="l_content">
     <!-- 自定义的内容 -->
     
+    <!-- 首页正计时 -->
+    
+  <div class="timer">
+    <h3 class="timer-title" style="font-weight: normal;">自<b style="color: #f19ec2;">2023年11月7日上午9:58，我向你发送第一条消息</b>起，我们已经认识了……</h3>
+    <div class="timer-content">
+      <p id="timer-content"></p>
+    </div>
+  </div>
+  <script>
+    // 深绿：077a7a，主题绿=16a951,减半后in十进制=11.85.41
+    // 设置计时器与起始时间
+    var timerElement = document.getElementById('timer-content');
+    var startDate = new Date(2023,10,7,9,58,0).getTime();
+    // 更新计时器显示的函数
+    function updateTimer() {
+      var now = new Date();
+      var timeDiff = now.getTime() - startDate;
+      // 转化输出格式
+      var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      var showContent = '<b>' + days + '</b> 天 ';
+      var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var showContent = showContent + '<b>' + hours + '</b> 时 ';
+      var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      var showContent = showContent + '<b>' + minutes + '</b> 分 ';
+      // var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+      // var showContent = showContent + '<b>' + seconds + '</b> 秒 ';
+      
+      // 更新页面上的倒计时显示
+      timerElement.innerHTML = showContent;
+      setTimeout(updateTimer, 20000);
+    }
+
+    // 初始调用
+    updateTimer();
+  </script>
+
     <!-- 首页倒计时 -->
     
   <div class="countdown">
@@ -1410,13 +1446,13 @@
               
                 <div class="index-notice-content__title">
                   
-                    <a href="/2023/11/07/Someone/" title="ZYY is off the market!" style="color:pink">
+                    <a href="/2023/11/07/Someone/" title="ZYY is off the market!" style="color:#f09cc0">
                       ZYY is off the market!
                     </a>
                   
                 </div>
                 
-                  <div class="index-notice-content__date" style="color:pink">
+                  <div class="index-notice-content__date" style="color:#f09cc0">
                     7 Nov, 2023
                   </div>
                 
@@ -2482,7 +2518,7 @@ Add a new post (run in Terminal):hexo n(ew) &lt;title&gt
       
         
           <div class="footer-copyright">
-            <p>Copyright © 2023 <a target="_blank" rel="noopener" href="https://github.com/Eyang233">yuang01</a>    All rights reserved</p>
+            <p>Copyright © 2023 <a target="_blank" rel="noopener" href="https://github.com/Eyang233">Eyang233</a>  |  All rights reserved</p>
 
           </div>
         
