@@ -713,6 +713,34 @@
 
 
 <script>
+  import java.io.BufferedReader;
+  import java.io.FileReader;
+  import java.io.IOException;
+  import java.util.ArrayList;
+  import java.util.List;
+
+  public class ReadTxtFileToList {
+      public static void main(String[] args) {
+          // 指定要读取的txt文件的路径
+          String filePath = "path/to/your/file.txt";
+
+          List<String> lines = new ArrayList<>();
+          try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+              String line;
+
+              // 逐行读取文件内容并添加到List中
+              while ((line = reader.readLine()) != null) {
+                  lines.add(line);
+              }
+          } catch (IOException e) {
+              // 处理异常
+              e.printStackTrace();
+          }
+      }
+  }
+
+
+
   var autoplay = JSON.parse('false');
   var delay = '5000';
   var loop = JSON.parse('true') ? false : JSON.parse('true');
