@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Timer</title>
+      <link href="/2023/11/14/timer/"/>
+      <url>/2023/11/14/timer/</url>
+      
+        <content type="html"><![CDATA[<p>给首页加了个小小的正计时～</p><p>其实代码改动不大，只需要把计算倒计时公式的减数和被减数调换，并删去最后限制无限制倒计时的代码就好了。</p><p>以下是<code>timer.ejs</code>的完整内容↓</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.timer.on &amp;&amp; page.current === 1) &#123; %&gt;</span><br><span class="line">  &lt;div class=&quot;timer&quot;&gt;</span><br><span class="line">    &lt;h3 class=&quot;timer-title&quot; style=&quot;font-weight: normal;&quot;&gt;自&lt;b style=&quot;color: #f19ec2;&quot;&gt;&lt;%= theme.timer.title %&gt;&lt;/b&gt;起，我们已经认识了……&lt;/h3&gt;</span><br><span class="line">    &lt;div class=&quot;timer-content&quot;&gt;</span><br><span class="line">      &lt;p id=&quot;timer-content&quot;&gt;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    // 设置计时器与起始时间</span><br><span class="line">    var timerElement = document.getElementById(&#x27;timer-content&#x27;);</span><br><span class="line">    var startDate = new Date(&lt;%= theme.timer.start_date %&gt;).getTime();</span><br><span class="line">    // 更新计时器显示的函数</span><br><span class="line">    function updateTimer() &#123;</span><br><span class="line">      var now = new Date();</span><br><span class="line">      var timeDiff = now.getTime() - startDate;</span><br><span class="line">      // 转化输出格式</span><br><span class="line">      var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));</span><br><span class="line">      var showContent = &#x27;&lt;b&gt;&#x27; + days + &#x27;&lt;/b&gt; 天 &#x27;;</span><br><span class="line">      var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));</span><br><span class="line">      var showContent = showContent + &#x27;&lt;b&gt;&#x27; + hours + &#x27;&lt;/b&gt; 时 &#x27;;</span><br><span class="line">      var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));</span><br><span class="line">      var showContent = showContent + &#x27;&lt;b&gt;&#x27; + minutes + &#x27;&lt;/b&gt; 分 &#x27;;</span><br><span class="line">      // var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);</span><br><span class="line">      // var showContent = showContent + &#x27;&lt;b&gt;&#x27; + seconds + &#x27;&lt;/b&gt; 秒 &#x27;;</span><br><span class="line">      </span><br><span class="line">      // 更新页面上的倒计时显示</span><br><span class="line">      timerElement.innerHTML = showContent;</span><br><span class="line">      setTimeout(updateTimer, 20000);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 初始调用</span><br><span class="line">    updateTimer();</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Code </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Someone</title>
+      <link href="/2023/11/07/Someone/"/>
+      <url>/2023/11/07/Someone/</url>
+      
+        <content type="html"><![CDATA[<p>It seems that I’m off the market.</p><p>Best wishes for us!</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>18.10.2023 MBTI</title>
+      <link href="/2023/10/18/20231018-MBTI/"/>
+      <url>/2023/10/18/20231018-MBTI/</url>
+      
+        <content type="html"><![CDATA[<h1 id="INFP-O-C"><a href="#INFP-O-C" class="headerlink" title="INFP-O-C"></a>INFP-O-C</h1><p>I（内向型introvert）: 90%<br>N（直觉型intuition）: 52%<br>F（情感型feeling）: 65%<br>P（展望型perceiving）: 64%</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MBTI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>28.04.2023 MBTI</title>
+      <link href="/2023/10/18/20230428-MBTI/"/>
+      <url>/2023/10/18/20230428-MBTI/</url>
+      
+        <content type="html"><![CDATA[<h1 id="ISTP-T"><a href="#ISTP-T" class="headerlink" title="ISTP-T"></a>ISTP-T</h1><p>I（内向型introvert）: 69%<br>S（实感型sensing）: 57%<br>T（逻辑型thinking）: 60%<br>P（展望型perceiving）: 75%</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MBTI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hope vs Wish</title>
+      <link href="/2023/10/16/Hope&amp;Wish/"/>
+      <url>/2023/10/16/Hope&amp;Wish/</url>
+      
+        <content type="html"><![CDATA[<h1 id="The-Difference-Between-Hope-and-Wish"><a href="#The-Difference-Between-Hope-and-Wish" class="headerlink" title="The Difference Between Hope and Wish"></a>The Difference Between Hope and Wish</h1><h3 id="hope-possibly-achieved-through-hard-work"><a href="#hope-possibly-achieved-through-hard-work" class="headerlink" title="hope: possibly achieved through hard work"></a>hope: possibly achieved through hard work</h3><ol><li>hope to do sth.<br> e.g. I hope to see you again soon.</li><li>hope + clause<br> e.g. I hope that I can pass the exam tomorrow.</li></ol><h3 id="wish-an-intention-that-may-fail"><a href="#wish-an-intention-that-may-fail" class="headerlink" title="wish: an intention that may fail"></a>wish: an intention that may fail</h3><ol><li>wish (sb.) to do sth.<br> e.g. I wish the manager to get informed at once.</li><li>wish + n.<br> e.g. We wish you both health and longevity.</li><li>wish sth. done<br> e.g. I wish the letter posted at once.</li><li>wish + clause<br> e.g. I wish you wouldn’t leave your clothes all over the floor.<code>(a kind of request)</code></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Study </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>A Disadvantage of Apple Watch</title>
+      <link href="/2023/10/16/Apple-Watch-Used/"/>
+      <url>/2023/10/16/Apple-Watch-Used/</url>
+      
+        <content type="html"><![CDATA[<p>Generally speaking, I do love my Apple Watch. But what is to my disappointment is that it may cause burns on my wrist with it on while sleeping. I can clearly see the wound on my left wrist while taking a shower, because this is the only moment that I put my watch off.<br>But I still regard it as a common phenomenon when wearing a smart wearable device, because it seemed that I was also burned when I first wore my Mi Smart Band. This explanation may be more a tendentious defense than a seek of facts. But wish the incidental burn could disappear in the future.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>12306</title>
+      <link href="/2023/09/28/12306/"/>
+      <url>/2023/09/28/12306/</url>
+      
+        <content type="html"><![CDATA[<p><img src="%E5%80%92%E8%AE%A1%E6%97%B6.png" class="lazyload placeholder" data-srcset="%E5%80%92%E8%AE%A1%E6%97%B6.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="12306我劝你最好不要不识好歹(◐‿◑)"><br><img src="%E5%8C%97%E4%BA%AC%E5%8D%97.png" class="lazyload placeholder" data-srcset="%E5%8C%97%E4%BA%AC%E5%8D%97.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="别逼我跪下来求你"><br><img src="%E5%BE%B7%E5%B7%9E%E4%B8%9C.png" class="lazyload placeholder" data-srcset="%E5%BE%B7%E5%B7%9E%E4%B8%9C.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Apple Watch Comments</title>
+      <link href="/2023/09/25/Apple-Watch-Comments/"/>
+      <url>/2023/09/25/Apple-Watch-Comments/</url>
+      
+        <content type="html"><![CDATA[<p>Having weared new watch for a day, I do love it so much! It would be quite convenient for me to tap on and tap off when taking public transit. What makes me more exciting is that I’ve linked my student card to the electronic transportation card, which means I can tap with my watch and pay on campus. However, since Weixin Pay is more common in my life, I also added it to the face so that it won’t take long to open payment code.</p><p>Everything is new, including the workout track and handwashing timer. Double pinch to confirm is also a fantastic interaction. What is kind like a pity is that I cannot find a route on my watch once it is diconnected to WLAN. I can only set it up on my phone and it will automatically show on the watch. I still need to adjust to it.</p><p>Let me show it off at the end of the post!<br><img src="AppleWatch.png" class="lazyload placeholder" data-srcset="AppleWatch.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="P.S. iOS 17 is not a good operation system, at least these weeks, for me"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Countdown</title>
+      <link href="/2023/09/17/Countdown/"/>
+      <url>/2023/09/17/Countdown/</url>
+      
+        <content type="html"><![CDATA[<p>鏖战一晚上，终于完成了首页的倒计时功能！感谢ChatGPT的倾情帮助～</p><p>以下是countdown.ejs的内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.countdown.on &amp;&amp; page.current === 1) &#123; %&gt;</span><br><span class="line">  &lt;div class=&quot;countdown&quot;&gt;</span><br><span class="line">    &lt;h3 class=&quot;countdown-title&quot; style=&quot;font-weight: normal;&quot;&gt;距离&lt;b style=&quot;color: #16a951;&quot;&gt;&lt;%= theme.countdown.title %&gt;&lt;/b&gt;还有&lt;/h3&gt;</span><br><span class="line">    &lt;div class=&quot;countdown-content&quot;&gt;</span><br><span class="line">      &lt;p id=&#x27;countdown-content&#x27;&gt;</span><br><span class="line">        &lt;script&gt;</span><br><span class="line">          // 设置截止时间</span><br><span class="line">          var targetDate = new Date(&lt;%= theme.countdown.end_date %&gt;).getTime();</span><br><span class="line">          // 设置是否精确到时/分/秒</span><br><span class="line">          var accuracyHour = false</span><br><span class="line">          var accuracyMinute = false</span><br><span class="line">          var accuracySecond = false</span><br><span class="line">          // 计算剩余时间</span><br><span class="line">          function updateCountdown() &#123;</span><br><span class="line">            var now = new Date();</span><br><span class="line">            var timeLeft = targetDate - now.getTime();</span><br><span class="line">            // 计算剩余天、时、分、秒</span><br><span class="line">            var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));</span><br><span class="line">            var showContent = &#x27;&lt;b style=&quot;font-size: 25px; color: #107d3d;&quot;&gt;&#x27; + days + &#x27;&lt;/b&gt; 天 &#x27;;</span><br><span class="line">            if (accuracyHour) &#123;</span><br><span class="line">              var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));</span><br><span class="line">              var showContent = showContent + &#x27;&lt;b&gt;&#x27; + hours + &#x27;&lt;/b&gt; 时 &#x27;;</span><br><span class="line">            &#125; else if (accuracyMinute) &#123;</span><br><span class="line">              var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));</span><br><span class="line">              var showContent = showContent + &#x27;&lt;b&gt;&#x27; + minutes + &#x27;&lt;/b&gt; 分 &#x27;;</span><br><span class="line">            &#125; else if (accuracySecond) &#123;</span><br><span class="line">            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);</span><br><span class="line">            var showContent = showContent + &#x27;&lt;b&gt;&#x27; + seconds + &#x27;&lt;/b&gt; 秒 &#x27;;</span><br><span class="line">            &#125;</span><br><span class="line">            // 更新页面上的倒计时显示</span><br><span class="line">            document.getElementById(&quot;countdown-content&quot;).innerHTML = showDay + showHour + showMin + showSec;</span><br><span class="line"></span><br><span class="line">            if (timeLeft &gt; 0) &#123;</span><br><span class="line">              // 每秒钟更新一次倒计时</span><br><span class="line">              setTimeout(updateCountdown, 1000);</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">              // 倒计时结束后显示消息</span><br><span class="line">              clearInterval(setTimeout(updateCountdown));</span><br><span class="line">              document.getElementById(&quot;countdown-content&quot;).innerHTML = &quot;0 天 0 时 0 分 0 秒&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line"></span><br><span class="line">          // 初始调用</span><br><span class="line">          updateCountdown();</span><br><span class="line">        &lt;/script&gt;</span><br><span class="line">      &lt;/p&gt; </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Code </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>First Apple Watch Purchased!</title>
+      <link href="/2023/09/16/First-Apple-Watch-Purchased/"/>
+      <url>/2023/09/16/First-Apple-Watch-Purchased/</url>
+      
+        <content type="html"><![CDATA[<p>Went to Xidan yesterday and wanted to try on the new watch. However, the shop assistant told me that new watch can only be tried after 22 Sep, the day when new products arrive, so I can only view them on the website. What is worse is that the new iPhone was released and all people were flooding into the website, resulting that I was unable to help a foreigner check the price of a product. After finishing my dinner, I decided to check some unimportant information and placed an order on my phone.<br><img src="IMG_2915.jpg" class="lazyload placeholder" data-srcset="IMG_2915.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="The expected pick-up date is due on 23 Sep."></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Tips</title>
+      <link href="/2023/09/16/Tips/"/>
+      <url>/2023/09/16/Tips/</url>
+      
+        <content type="html"><![CDATA[<p>Some commom codes that are frequently used while editing posts:</p><h3 id="Add-a-new-post-run-in-Terminal"><a href="#Add-a-new-post-run-in-Terminal" class="headerlink" title="Add a new post (run in Terminal):"></a>Add a new post (run in Terminal):</h3><p><code>hexo n(ew) &lt;title&gt;</code><br>Add <code>&#39;&#39;</code> to <code>&lt;title&gt;</code> if needed</p><h3 id="Add-a-new-picture"><a href="#Add-a-new-picture" class="headerlink" title="Add a new picture:"></a>Add a new picture:</h3><p><code>![description](img.png)</code><br>img.png should be put in the file named after the post</p><h3 id="Add-subtitles-or-topics-or-sub-topics"><a href="#Add-subtitles-or-topics-or-sub-topics" class="headerlink" title="Add subtitles or topics or sub topics:"></a>Add subtitles or topics or sub topics:</h3><p><code># title</code><br><code>## subtitle</code><br><code>### topic</code><br><code>#### subtopic</code><br>……</p><p>→ to be continued</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Code </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Das Leben der Anderen</title>
+      <link href="/2023/09/16/Das-Leben-der-Anderen/"/>
+      <url>/2023/09/16/Das-Leben-der-Anderen/</url>
+      
+        <content type="html"><![CDATA[<p><img src="poster.jpg" class="lazyload placeholder" data-srcset="poster.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="电影海报"></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>（要不就把这个帖子当作弹幕来试试？）以下是一些才看了一点点就对片名评头论足的话（居然还没什么大错？！）<br>《窃听风暴》，我觉得这个中文名是直接透露了电影的主要内容。风暴的话emmm，也许是表现了对这个作家监听这件事的重要程度以及引起的波澜之巨大？相比起来原名确实很棒：别人的生活。谁的生活？作家？女主？地中海特工？死胖子？此外，别人的生活也给地中海特工带去了一些改变。“窃听”两个字未免有些冰冷，而“别人的生活”却能让特工的转变增添一些温度和合理性。</p><h2 id="观影时的一些碎碎念"><a href="#观影时的一些碎碎念" class="headerlink" title="观影时的一些碎碎念"></a>观影时的一些碎碎念</h2><p>老作家自杀了，特工在阁楼听作家演奏的《献给好人的奏鸣曲》时听哭了（甚至冰山脸还笑了！），我认为这是一个很重要的转变。稍后的镜头里，他在电梯里偶遇乱说话的小孩，却最终忍住了没有问他爸爸的名字。他听到政治不正确的言论第一反应是询问该言论的发出者，可是却忍住了，应该是老作家的死，以及那一段钢琴曲的确打动他了吧。</p><p>突然想到死胖子想弄死那个作家会不会是因为想霸占他女朋友啊……</p><p>作家在求女主不要去见死胖子，但是弹幕提醒我后面有个牵线木偶……所以艺术已经沦为政治的牵线木偶了吗？还是说，艺术本就是政治的附属品。男主觉得人有才便不需要这一套令人作呕的体系，而女主不然，她认为上位者能决定观众所看到的，能抹杀不听从的文艺从业者。<br>（这里的男主是指作家……说实话我到现在也不太确定到底谁是男主）</p><p>特工监听完下班时撞到了回家的邻居夫人，会是伏笔吗？</p><p>特工去了个酒馆，从矿泉水换成了两杯伏特加。到底是要借酒消愁，还是给人留一杯？<br>后面又加了好几杯，应该是借酒消愁吧……</p><p>女主也来了这家酒馆，弹幕提到了可能不是巧合，而是刻意的偶遇。特工进行了话疗，效果未知。（接班的小伙子好可爱啊www）弹幕说话疗成功了，女主被劝回了家，但是被剪了。不理解，剪辑好奇怪，烦死了。</p><p>1977年起，东德国家统计局停止统计自杀人数。<br>2012年，暂停公布基尼系数<br>2023年，暂停公布青年失业率</p><p>作家好蠢，都不知道防窃听，还得靠朋友……到公园他们谈论想在西德Spiegel出版作品（膜拜大佬），弹幕提到了出版审查制度（这是可以说的吗）然后故意去作家家里钓鱼，但是是地中海特工在监听诶，所以到底会不会有一些不好的影响……<br>啊啊啊啊啊啊地中海没有举报，他真的我哭死</p><p>地中海带举报稿（疑似）去见上司的时候听到了分门别类审问政治犯艺术家的方法，弹幕提到《1984》，细思极恐。但是地中海又瞒下了举报稿，也许确实是怕惨无人道的审讯方式扼杀了优秀的艺术家。所以严格的审查制度是否对文艺事业造成了不可磨灭的打击？所以地中海很有可能是怕如此无人道的对艺术的摧残，而最终决定保护好最佳的……</p><p>很好，死胖子爱而不得，要毁了女主。前面女主的预言成真了，政治，确实能够毁掉不符合心意的艺术，不管是哪方面的不符合心意……但是在把她带到局里后，她试图用自己的价值保护自己，所以她会供出作家藏匿文稿 &amp; 打字机的事吗？<br>会，特工去搜查了，但是没有结果。划开沙发找证据，可惜没找到。“这是国安局地址，如果给您造成任何损失，您可以去部里申报赔偿”“（没有检查物品受损情况直接说）我确定东西都完好无损。”好讽刺哈哈哈哈</p><p>地中海被请去喝茶了，但是他上司没在座位上放垫子，好感动。好吧实际上是给他最后一次机会，让他审讯女主。女主认出他来了，但是不知道试图隐藏认出时的震惊有没有被发觉。</p><p>“无谓的英雄主义”，但是他一直在试图保护作家哈哈哈哈哈哈<br>想想你的观众：在酒吧碰面时他表示自己是她的观众<br>审讯时还有好多其他的暗示，他真的很努力在保护那个作家了</p><p>地中海把打字机拿走了……<br>女主撞车自杀了……<br>弹幕认为是女主会错意，很后悔，所以决定以死谢罪……<br><img src="berlin-wedekindstrasse.jpg" class="lazyload placeholder" data-srcset="berlin-wedekindstrasse.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="Wedekindstraße, Berlin"><br>地中海被拉去打杂，听到柏林墙倒的时候很平静。作家查自己的档案时查到地中海小天使，却看到他面无表情挺直腰杆不卑不亢送报纸，回去了。所以是多年的特工职业素养让他心态平和，还是对这个世界已经失望了，才使他面对一切都泛不起一点波澜？但或许是他对信念的坚持，使他能一直挺直腰杆。</p><p>看到东西德统一，再一次觉得Das Leben der Anderen比“窃听风暴”好多了。地中海参与了别人的生活，但是彻头彻尾地改变了别人的生活。电影并不只是关于窃听，其中展现的人性之美是不可忽视的，而人性之美更蕴含于生活中，而不是无耻的窃听。</p><p>最后，作家写了一本书：《献给好人的奏鸣曲》。地中海面无表情，挺直腰杆，拖着送报车从海报前走过。回头看了看，走进了卡尔·马克思书店。</p><p>夹衬：一个指纹<br>前扉：书名<br>扉：<code>HGW XX/7 gewidmet, in Dankbarkeit</code></p><p>店员：需要包起来吗？（指书）<br>地中海：Nein, es ist für mich.</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>3:55看完啦！虽然最后写的也不太像弹幕了，但是还是很开心能写这么长的话～很难想象语言学引论练习课上的一个素材能让我看这么久www评论区有这样的话，应该是引用自导演&#x2F;编剧的采访：“因为我的妻子曾经就是一名告密者。这不是别人的生活，这就是我的生活。”</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>设置打赏按钮</title>
+      <link href="/2023/09/14/%E8%AE%BE%E7%BD%AE%E6%89%93%E8%B5%8F%E6%8C%89%E9%92%AE/"/>
+      <url>/2023/09/14/%E8%AE%BE%E7%BD%AE%E6%89%93%E8%B5%8F%E6%8C%89%E9%92%AE/</url>
+      
+        <content type="html"><![CDATA[<p>终于让页脚的打赏小按钮有了除鼠标悬停高亮的功能了呜呜呜呜</p><p>页脚打赏的代码是复制文末打赏按钮的……名字被改成<code>foot_donate.ejs</code>以后就直接被塞到哪吃灰了也不知道。以下代码是该代码的内容！</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;appDonate&quot; class=&quot;foot-donate&quot;&gt;</span><br><span class="line">  &lt;div id=&quot;donate_board&quot; class=&quot;fa-solid fa-hand-holding-dollar center&quot; href=&quot;javascript:;&quot; title=&quot;Give me power!&quot; style=&#x27;cursor: pointer&#x27; @click=&quot;showDialogDrawer()&quot;&gt;&lt;a&gt; Donate&lt;/a&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  &lt;transition name=&quot;fade&quot;&gt;</span><br><span class="line">    &lt;div </span><br><span class="line">      class=&quot;donate-box-mask&quot;</span><br><span class="line">      v-cloak </span><br><span class="line">      v-show=&quot;visible&quot;</span><br><span class="line">      @click=&quot;cancelDialogDrawer()&quot;</span><br><span class="line">    &gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/transition&gt;</span><br><span class="line">  &lt;transition name=&quot;bounce&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;donate-box&quot; v-cloak v-show=&quot;visible&quot;&gt;</span><br><span class="line">      &lt;div class=&quot;donate-box_close&quot;&gt;</span><br><span class="line">        &lt;i class=&quot;fas fa-times&quot; aria-hidden=&quot;true&quot; @click=&quot;cancelDialogDrawer&quot; pointer&gt;&lt;/i&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;donate-box_title&quot;&gt;</span><br><span class="line">        &lt;h4&gt;</span><br><span class="line">          &lt;%=theme.donate_message%&gt;</span><br><span class="line">        &lt;/h4&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;donate-box_tab&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;Alipay&quot; pointer :class=&quot;&#123;&#x27;active&#x27;: tabActive === &#x27;Alipay&#x27;&#125;&quot; @click=&quot;changeTabActive(&#x27;Alipay&#x27;)&quot;&gt;</span><br><span class="line">          支付宝</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;WeChatpay&quot; pointer :class=&quot;&#123;&#x27;active&#x27;: tabActive === &#x27;WeChatpay&#x27;&#125;&quot; @click=&quot;changeTabActive(&#x27;WeChatpay&#x27;)&quot;&gt;</span><br><span class="line">          微信</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">      &lt;div class=&quot;donate-box_img&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;AlipayImg&quot; v-show=&quot;tabActive === &#x27;Alipay&#x27;&quot;&gt;</span><br><span class="line">          &lt;img src=&quot;&lt;%- url_for(theme.Alipay) %&gt;&quot; alt=&quot;支付宝打赏&quot; /&gt;</span><br><span class="line">        &lt;/div&gt; </span><br><span class="line">        &lt;div class=&quot;WeChatpayImg&quot; v-show=&quot;tabActive === &#x27;WeChatpay&#x27;&quot;&gt;</span><br><span class="line">          &lt;img src=&quot;&lt;%- url_for(theme.WeChatpay) %&gt;&quot; alt=&quot;微信打赏&quot; /&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/transition&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">  var body = document.body || document.documentElement || window;</span><br><span class="line">  var vm = new Vue(&#123;</span><br><span class="line">    el: &#x27;#appDonate&#x27;,</span><br><span class="line">    data: &#123;</span><br><span class="line">      visible: false,</span><br><span class="line">      tabActive: &#x27;Alipay&#x27;,</span><br><span class="line">      top: 0,</span><br><span class="line">    &#125;,</span><br><span class="line">    computed: &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    mounted() &#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods: &#123;</span><br><span class="line">      showDialogDrawer() &#123;</span><br><span class="line">        this.visible = true;</span><br><span class="line">        // 防止页面滚动，只能让弹框滚动</span><br><span class="line">        // function getScroll() &#123;</span><br><span class="line">        //   return &#123;</span><br><span class="line">        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,</span><br><span class="line">        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0</span><br><span class="line">        //   &#125;;</span><br><span class="line">        // &#125;</span><br><span class="line">        this.top = $(document).scrollTop() // or getScroll().top</span><br><span class="line">        // console.log(&#x27;aa&#x27;, $(&#x27;.main-content&#x27;));</span><br><span class="line">        body.style.cssText = &#x27;overflow: hidden;&#x27;;</span><br><span class="line">      &#125;,</span><br><span class="line">      cancelDialogDrawer() &#123;</span><br><span class="line">        this.visible = false;</span><br><span class="line">        body.removeAttribute(&#x27;style&#x27;);</span><br><span class="line">        $(document).scrollTop(this.top)</span><br><span class="line">      &#125;,</span><br><span class="line">      changeTabActive(name) &#123;</span><br><span class="line">        this.tabActive = name;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    created() &#123;&#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>最开头的一点点部分的注释：<br><code>&lt;div id=&quot;donate_board&quot;// 给按钮一个名字</code><br><code>class=&quot;fa-solid fa-hand-holding-dollar center&quot;// 给按钮一个形状和位置</code><br><code>href=&quot;javascript:;&quot;// 调用javascript</code><br><code>title=&quot;Give me power!&quot;// 鼠标放上去后系统显现出的提示语</code><br><code>style=&#39;cursor: pointer&#39;// 鼠标悬停会变成小手</code><br><code>@click=&quot;showDialogDrawer()&quot;&gt;// 点击运行该子程序</code><br><code>&lt;a&gt; Donate&lt;/a&gt;// 图标后面的文字</code><br><code>&lt;/div&gt;</code></p><p>哼哼，这篇帖子全是干货呢，我好棒！</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Code </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>New Donate Icon!</title>
+      <link href="/2023/09/14/New-Donate-Icon/"/>
+      <url>/2023/09/14/New-Donate-Icon/</url>
+      
+        <content type="html"><![CDATA[<p>After trying for hours and through several classes, I have now finnaly added an interactive icon for donation at the footer. What is to refine is the colour and the highlight of the icon. Looking forward to solving it.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Bugs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Annoying Icon</title>
+      <link href="/2023/09/14/Annoying-Icon/"/>
+      <url>/2023/09/14/Annoying-Icon/</url>
+      
+        <content type="html"><![CDATA[<p>Made secondary menu for ‘Toolkits’ today. But I cannot understand how to add an icon for them. Even though the theme maker had offered several fa-icons in the original file, I still do not know if there are more icons like this or how can I find more.</p><p>Tried to add a photo as a icon, failed. Hope I can solve this tonight.</p><p>I also found that Aplipay QR code cannot show while WeixinPay QR code is working well. So how do all these bugs appear?</p><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;<br>Added at 2023-09-14 03:08:40</p><p>Great! After searching for ages, I have understood how to add icons!</p><p>Thanks to the original author of the theme, who had added ‘fontawesome’ to CDN, everything I need to do is checking the name of the icon on <a href="https://fontawesome.com/icons">https://fontawesome.com/icons</a>! </p><p>My next goal is to fix the search fuction. Wish it could come true as soon as possible.</p><p>P.S. I still cannot tell the difference between hope and wish.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Bugs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>What to buy?</title>
+      <link href="/2023/09/14/What-to-buy/"/>
+      <url>/2023/09/14/What-to-buy/</url>
+      
+        <content type="html"><![CDATA[<p>啊啊啊啊啊救命啊好纠结，选择困难症又犯了，完全不知道要买什么QAQ</p><p>打算周五去西单看看能不能试戴……明早九点抢货还是先算了吧T_T</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Apple</title>
+      <link href="/2023/09/13/Apple/"/>
+      <url>/2023/09/13/Apple/</url>
+      
+        <content type="html"><![CDATA[<p>今天苹果发布会！等着看完买手表！</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Fixed!</title>
+      <link href="/2023/09/12/Fixed/"/>
+      <url>/2023/09/12/Fixed/</url>
+      
+        <content type="html"><![CDATA[<p>Congratulations!</p><p>Now we can visit my website on other devices.</p><p>All I have done to solve this problem is just turning module ‘busuanzi’ to <code>false</code></p><p>……</p><p>Anyway, glad if you can see this article!</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Bugs </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Purposes</title>
+      <link href="/2023/09/12/Purposes/"/>
+      <url>/2023/09/12/Purposes/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Why-do-I-write-my-thoughts-here"><a href="#Why-do-I-write-my-thoughts-here" class="headerlink" title="Why do I write my thoughts here?"></a>Why do I write my thoughts here?</h2><p>In fact, the establishment of this website is just an incident. But I think this is a perfect place to practise my English and say something privately. I believe only a few people are able to see it, let alone my acquaintants. So it is a safer place to express a feeling and might be more stable than Twitter, more free than WeChat, and more flexible than most domestic social media.</p><h2 id="My-goals"><a href="#My-goals" class="headerlink" title="My goals:"></a>My goals:</h2><ol><li>Wish I can fix bugs and keep it running. Though it can be visited from other devices in the afternoon, many new changes have made this website inaccessible from other devices, at least until the time I write down these words. I believe it will become better in the future.</li><li>Make my own theme. This theme (Bamboo) is downloaded on the Internet and is certainly used by many other people. Hope I can learn how to make a beautiful website and design my own page.</li><li>Split the Chinese and English section. Make different pages for different languages. Maybe the contents will differ from each other, too.</li></ol><p>Perhaps there are more goals. Maybe I am going to update it sometime.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Thoughts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>A New Post</title>
+      <link href="/2023/09/12/A%20New%20Post/"/>
+      <url>/2023/09/12/A%20New%20Post/</url>
+      
+        <content type="html"><![CDATA[<p>Thanks to Bilibili, I browsed a video that teaches me how to build my own website. Since I have great interest in everything that has nothing to do with German language, I tried to build this website on a Chinese course (lol). Wish I can keep the site running and record my life.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/09/12/hello-world/"/>
+      <url>/2023/09/12/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>blank</title>
+      <link href="/2023/09/12/blank/"/>
+      <url>/2023/09/12/blank/</url>
+      
+        <content type="html"><![CDATA[<p>Thanks to Bilibili, I browsed a video that teaches me how to build my own website. Since I have great interest in everything that has nothing to do with German language, I tried to build this website on a Chinese course (lol). Wish I can keep the site running and record my life.</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
