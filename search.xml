@@ -4,7 +4,26 @@
   
     
     <entry>
-      <title>作VS做</title>
+      <title>nature VS the nature</title>
+      <link href="/2024/08/12/Nature_vs_theNature/"/>
+      <url>/2024/08/12/Nature_vs_theNature/</url>
+      
+        <content type="html"><![CDATA[<h2 id="nature"><a href="#nature" class="headerlink" title="nature"></a>nature</h2><h5 id="Refers-to-the-natural-world-or-the-inherent-qualities-or-characteristics-of-someone-or-something"><a href="#Refers-to-the-natural-world-or-the-inherent-qualities-or-characteristics-of-someone-or-something" class="headerlink" title="Refers to the natural world, or the inherent qualities or characteristics of someone or something."></a>Refers to the natural world, or the inherent qualities or characteristics of someone or something.</h5><p>Without the definite article “the”, <code>NATURE</code> typically refers to the <u>physical world</u> and everything in it that is not made by humans, such as plants, animals, landscapes, the processes that occur in the environment, or inherent qualities, tendencies, disposition, etc.</p><h5 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h5><ol><li>Nature is beautiful in the springtime.</li><li>We should protect nature to preserve the environment.</li><li>Nature is unpredictable.</li><li>It’s in her nature to be kind.</li></ol><h2 id="the-nature"><a href="#the-nature" class="headerlink" title="the nature"></a>the nature</h2><h5 id="Refers-to-the-specific-characteristics-or-essence-of-something"><a href="#Refers-to-the-specific-characteristics-or-essence-of-something" class="headerlink" title="Refers to the specific characteristics or essence of something."></a>Refers to the specific characteristics or essence of something.</h5><p>When you use <code>THE NATURE</code> followed by a descriptive clause, it refers to the <u>fundamental qualities or characteristics</u> of something. The use of “the” emphasizes the specific essence or defining feature. </p><p>Meanwhile, “The nature” often requires additional context or a qualifier to clarify what specific aspect is being discussed, whereas “nature” as a standalone concept is more general.</p><h5 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h5><ol><li>The nature of his work requires attention to detail.</li><li>The nature of the agreement is that it’s mutually beneficial.</li><li>The nature of the problem is complex.</li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Study </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>作 VS 做</title>
       <link href="/2023/11/21/zuo/"/>
       <url>/2023/11/21/zuo/</url>
       
@@ -198,7 +217,7 @@
       <link href="/2023/09/16/Tips/"/>
       <url>/2023/09/16/Tips/</url>
       
-        <content type="html"><![CDATA[<p>Some commom codes that are frequently used while editing posts:</p><h3 id="Add-a-new-post-run-in-Terminal"><a href="#Add-a-new-post-run-in-Terminal" class="headerlink" title="Add a new post (run in Terminal):"></a>Add a new post (run in Terminal):</h3><p><code>hexo n(ew) &lt;title&gt;</code><br>Add <code>&#39;&#39;</code> to <code>&lt;title&gt;</code> if needed</p><h3 id="Add-a-new-picture"><a href="#Add-a-new-picture" class="headerlink" title="Add a new picture:"></a>Add a new picture:</h3><p><code>![description](img.png)</code><br>img.png should be put in the file named after the post</p><h3 id="Add-subtitles-or-topics-or-sub-topics"><a href="#Add-subtitles-or-topics-or-sub-topics" class="headerlink" title="Add subtitles or topics or sub topics:"></a>Add subtitles or topics or sub topics:</h3><p><code># title</code><br><code>## subtitle</code><br><code>### topic</code><br><code>#### subtopic</code><br>……</p><p>→ to be continued</p>]]></content>
+        <content type="html"><![CDATA[<p>Some commom codes that are frequently used while editing posts:</p><h2 id="Run-in-Terminal"><a href="#Run-in-Terminal" class="headerlink" title="Run in Terminal"></a>Run in Terminal</h2><h3 id="Add-a-new-post"><a href="#Add-a-new-post" class="headerlink" title="Add a new post:"></a>Add a new post:</h3><p><code>hexo n(ew) &lt;title&gt;</code><br>Add <code>&#39;&#39;</code> to <code>&lt;title&gt;</code> if needed</p><h2 id="Markdown-Codes"><a href="#Markdown-Codes" class="headerlink" title="Markdown Codes"></a>Markdown Codes</h2><h3 id="Add-a-new-picture"><a href="#Add-a-new-picture" class="headerlink" title="Add a new picture:"></a>Add a new picture:</h3><p><code>![description](img.png)</code><br>img.png should be put in the file named after the post</p><h3 id="Add-subtitles-or-topics-or-sub-topics"><a href="#Add-subtitles-or-topics-or-sub-topics" class="headerlink" title="Add subtitles or topics or sub topics:"></a>Add subtitles or topics or sub topics:</h3><p><code># title</code><br><code>## subtitle</code><br><code>### topic</code><br><code>#### subtopic</code></p><h2 id="HTML-Codes"><a href="#HTML-Codes" class="headerlink" title="HTML Codes"></a>HTML Codes</h2><h3 id="Underline"><a href="#Underline" class="headerlink" title="Underline:"></a>Underline:</h3><p><code>&lt;u&gt;underlined content&lt;/u&gt;</code><br>For ex<u>Sample</u>.</p><h3 id="Highlight"><a href="#Highlight" class="headerlink" title="Highlight"></a>Highlight</h3><p><code>&lt;mark&gt;highlighted content&lt;/mark&gt;</code><br>For ex<mark>Sample</mark>.</p><p>……</p><p>→ to be continued</p>]]></content>
       
       
       
